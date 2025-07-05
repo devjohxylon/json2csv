@@ -3,7 +3,7 @@
 # json2csv
 # JSON to CSV Converter CLI
 
-A minimal Python tool to convert a JSON array into a CSV file using only the standard library.
+Secure JSON → CSV CLI with injection protection, size limits & tests
 
 ## Requirements
 - Python 3.6+
