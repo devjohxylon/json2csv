@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+[![CI](https://github.com/devjohxylon/json2csv/actions/workflows/ci.yml/badge.svg)](https://github.com/devjohxylon/json2csv/actions)
+
 # json2csv
-=======
 # JSON to CSV Converter CLI
 
 A minimal Python tool to convert a JSON array into a CSV file using only the standard library.
