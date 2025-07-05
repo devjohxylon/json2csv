@@ -1,0 +1,32 @@
+# .github/workflows/ci.yml
+name: CI
+
+# Trigger on pushes or PRs to any branch
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout your code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Set up Python
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      # 3. Check syntax (lint)
+      - name: Check Python syntax
+        run: python -m py_compile json2csv.py
+
+      # 4. Smoke-test conversion
+      - name: Smoke test JSON→CSV
+        run: |
+          python json2csv.py data/sample.json data/test_output.csv
+          diff -u data/sample.csv data/test_output.csv
