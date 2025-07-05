@@ -3,7 +3,7 @@
 # json2csv
 # JSON to CSV Converter CLI
 
-Secure JSON → CSV CLI with injection protection, size limits & tests
+Secure JSON → CSV CLI with injection protection & size limits 
 
 ## Requirements
 - Python 3.6+
